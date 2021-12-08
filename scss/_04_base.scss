@@ -1,10 +1,19 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700;900&display=swap');
+
 html {
   font-size: 62.5%;
+  @include media-query(980px) {
+    font-size: 60%;
+}
 }
 
 body {
   font-size: 1.6rem;
-  display: none;
+  font-family: 'Poppins', sans-serif;
+  color: $blue-d;
+  line-height: 1.4;
+  overflow-x: hidden;
+  
 }
 
 a {
@@ -16,7 +25,8 @@ ul {
 }
 
 .container {
-  max-width: 140rem;
+  max-width: 120rem;
   width: 100%;
   margin: 0 auto;
+  padding: 0 1.5rem;
 }

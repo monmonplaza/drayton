@@ -27,3 +27,19 @@
     display: flex;
   }
 }
+
+.section--padding {
+  padding: 10rem 0;
+  @include media-query($break-md) {
+    padding: 5rem 0;
+  }
+}
+
+.only {
+  &--sm {
+    display: none;
+    @include media-query($break-md) {
+      display: block;
+    }
+  }
+}

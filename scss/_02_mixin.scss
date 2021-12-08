@@ -4,12 +4,19 @@
 
 @mixin btn {
   color: $light;
-  border-radius: 1rem;
-  padding: 1rem 1.6rem;
+  border-radius: 3rem;
+  padding: 1rem 2.5rem;
   text-align: center;
   min-width: 10rem;
   transition: 0.5s ease;
   &:hover {
     background-color: $red-d;
+  }
+}
+
+
+@mixin media-query($width: 620px) {
+  @media screen and (max-width: $width) {
+    @content;
   }
 }
