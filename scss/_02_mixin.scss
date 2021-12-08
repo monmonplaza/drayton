@@ -1,0 +1,15 @@
+@mixin transition($s: 0.5s) {
+  transition: $s ease;
+}
+
+@mixin btn {
+  color: $light;
+  border-radius: 1rem;
+  padding: 1rem 1.6rem;
+  text-align: center;
+  min-width: 10rem;
+  transition: 0.5s ease;
+  &:hover {
+    background-color: $red-d;
+  }
+}
