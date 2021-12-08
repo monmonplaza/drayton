@@ -1,0 +1,23 @@
+{
+  "name": "y",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "deploy": "gh-pages -d"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/monmonplaza/drayton.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/monmonplaza/drayton/issues"
+  },
+  "homepage": "https://github.com/monmonplaza/drayton",
+  "dependencies": {
+    "gh-pages": "^3.2.3"
+  }
+}
