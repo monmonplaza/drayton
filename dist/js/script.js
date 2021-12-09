@@ -22,6 +22,23 @@ document.addEventListener('DOMContentLoaded', function () {
 
         return false;
     });
+
+        // SMOOTH SCROLLING
+
+        $('.smooth-scroll').on('click', function(e) {
+            if(this.hash !== '') {
+                e.preventDefault();
+                $('nav').removeClass('show');
+                const hash = this.hash;
+    
+                $('html, body').animate({
+                    scrollTop: $(hash).offset().top - 20
+                }, 800)
+            }
+        })
+    
+
+
 })
 
 
@@ -35,46 +52,3 @@ if(toggleMenu) {
     })
 }
 
-
-
-// SMOOTH SCROLL
-document.querySelectorAll('.smooth-scroll').forEach(anchor => {
-    anchor.onclick = (e) => {
-        e.preventDefault()
-        const href = anchor.getAttribute('href')
-        const target = document.querySelector(href)
-        const to = target.offsetTop - 40;
-        scrollTo(document.documentElement, to, 500)
-
-        nav.classList.remove('show')
-        
-    }
-})
-
-const scrollTo = (element, to, duration) => {
-    let start = element.offsetTop
-    let change = to - start
-    let currentTime = 0
-    let increment = 20;
-
-
-    const animateScroll = () => {
-        currentTime += increment;
-        const val = easeInOutQuad(currentTime, start, change, duration);
-        element.scrollTop = val;
-        if (currentTime < duration) {
-            setTimeout(animateScroll, increment);
-        }
-    }
-
-    animateScroll()
-}
-
-const easeInOutQuad = (t, b, c, d) => {
-    t /= d / 2
-    if (t < 1) return c / 2 * t * t + b
-    t--
-    return -c / 2 * (t * (t - 2) - 1) + b
-}
-
-// END
