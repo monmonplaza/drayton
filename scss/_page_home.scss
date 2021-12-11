@@ -4,7 +4,7 @@
   position: fixed;
   background-color: $light;
   z-index: 9999;
-  
+
   &__wrapper {
     justify-content: space-between;
     padding: 1rem 0;
@@ -293,7 +293,7 @@
 .action {
   &__wrapper {
     grid-template-columns: 1fr 1fr;
-    grid-gap: 20rem;
+    grid-gap: 10rem;
     @include media-query(980px) {
       grid-template-columns: 1fr;
       grid-gap: 5rem;
@@ -304,8 +304,10 @@
         text-align: center;
       }
       img {
+        transform: translateX(-20px);
         @include media-query($break-md) {
           width: 100%;
+          transform: translateX(0px);
         }
       }
     }
@@ -415,7 +417,16 @@
       }
       p {
         padding-left: 1rem;
+        font-weight: bold;
       }
+    }
+
+    h3 {
+      font-size: clamp(3rem, 5vw, 3.5rem);
+      font-weight: bold;
+      max-width: 46rem;
+      margin-top: 4rem;
+      color: $red;
     }
   }
 
@@ -434,10 +445,7 @@
           grid-column: 1/2;
         }
       }
-     
-      
     }
-    
   }
 }
 
@@ -447,9 +455,9 @@
   font-size: 1.4rem;
 }
 .form__group {
-  input[type="submit" ] {
+  input[type="submit"] {
     border: none;
-    display:block;
+    display: block;
     margin-left: auto;
     cursor: pointer;
     margin-top: 2rem;

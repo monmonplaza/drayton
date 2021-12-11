@@ -25,7 +25,7 @@
 				//$msgClass = 'alert-danger';
 			} else {
 				// Passed
-				$toEmail = 'mark@klynecontracting.com';
+				$toEmail = 'info@dvplumbingandheating.ca';
 				$subject = 'Contact Request From '.$name;
 				$body = '<h2>Contact Request</h2>
 					<p><strong>Name:</strong> '.$name.' </p>
